@@ -1,1 +1,255 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 2.4rem;
+}
+
+.btn:hover {
+  background-color: #2192FF;
+  color: #fff;
+}
+
+.main-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #8EC3B0;
+  position: relative;
+}
+
+.main-cards-wrapper .modal-card {
+  background: #AAC4FF;
+  border-radius: 10px;
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-cards-wrapper .modal-card .title {
+  color: #0E5E6F;
+  font-size: 6.4rem;
+  margin-bottom: 30px;
+}
+
+.main-cards-wrapper .modal-game-title {
+  width: 50%;
+  text-align: center;
+}
+
+.main-cards-wrapper .modal-game-title span:first-child {
+  color: #fff;
+}
+
+.main-cards-wrapper .modal-game-title span:nth-child(2) {
+  color: #001253;
+}
+
+.main-cards-wrapper .modal-game-title span:nth-child(3) {
+  color: #DC5F00;
+}
+
+.main-cards-wrapper .modal-game-title span:nth-child(4) {
+  color: #000;
+}
+
+.main-cards-wrapper .modal-game-title span:nth-child(5) {
+  color: #905E96;
+}
+
+.main-cards-wrapper .modal-card .next-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 20px 60px;
+}
+
+.main-cards-wrapper .input-modal input {
+  padding: 20px;
+  min-width: 400px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+}
+
+.main-cards-wrapper .counter-modal .counter-item {
+  font-size: 6.4rem;
+  color: #0E5E6F;
+}
+
+.main-cards-wrapper .counter-modal,
+.main-cards-wrapper .input-modal {
+  display: none;
+}
+
+.main-cards-wrapper .game-modal-wrapper {
+  display: none;
+}
+
+.main-cards-wrapper .game-modal-wrapper {
+  height: 90%;
+  width: 60%;
+  background-color: #FFF7E9;
+}
+
+.main-cards-wrapper .game-modal-wrapper .game-modal-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  top: 5%;
+}
+
+.main-cards-wrapper .game-modal-wrapper .game-modal-input-wrapper .player-name {
+  font-size: 2rem;
+  color: #0E5E6F;
+  margin-bottom: 10px;
+}
+
+.main-cards-wrapper .game-modal-wrapper .game-modal-input-wrapper .new-name-input {
+  padding: 8px 25px;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.main-cards-wrapper .game-modal-wrapper .game-modal-input-wrapper .btn-new-name {
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+}
+
+.main-cards-wrapper .game-modal-wrapper .game-modal-top .show-random-color {
+  font-size: 1.4rem;
+  border: 1px solid #6F38C5;
+  padding: 10px 50px;
+  font-weight: bold;
+}
+
+.main-cards-wrapper .game-modal-wrapper .game-modal-top .generate-color-btn {
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+}
+
+.main-cards-wrapper .popup-color-btn {
+  width: 15%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  position: absolute;
+  height: 150px;
+  padding: 10px 50px;
+  top: 5%;
+  right: 5%;
+}
+
+.main-cards-wrapper .popup-color-btn .hexa-btn,
+.main-cards-wrapper .popup-color-btn .rgb-btn {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.main-cards-wrapper .game-modal-middle {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  position: absolute;
+  top: 25%;
+}
+
+.main-cards-wrapper .game-modal-middle .color-square {
+  background-color: #EDEDED;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px 0;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+.main-cards-wrapper .game-modal-middle .color-square:hover {
+  transform: scale(1.1);
+}
+
+.main-cards-wrapper .game-modal-middle .game-over {
+  position: fixed;
+  bottom: 25%;
+  font-size: 60px;
+  color: red;
+}
+
+.main-cards-wrapper .game-modal-bottom {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  font-size: 2rem;
+  width: 100%;
+  border-radius: 0, 0, 10px, 10px;
+}
+
+.main-cards-wrapper .game-modal-bottom .score-board-title {
+  margin-bottom: 20px;
+}
+
+.main-cards-wrapper .game-modal-bottom .btn-new-game {
+  position: absolute;
+  right: 20px;
+  top: -5px;
+  padding: 5px 8px;
+  border: none;
+  background-color: #FFF7E9;
+}
+
+.main-cards-wrapper .game-modal-bottom .btn-new-game:hover {
+  color: green;
+}
+
+.main-cards-wrapper .game-modal-bottom table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.main-cards-wrapper .game-modal-bottom th, .main-cards-wrapper .game-modal-bottom td {
+  height: 50px;
+  text-align: center;
+}
+
+.main-cards-wrapper .game-modal-bottom table, .main-cards-wrapper .game-modal-bottom th, .main-cards-wrapper .game-modal-bottom td {
+  border: 1px solid #000;
+}
+
+.main-cards-wrapper .popup-color-btn {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

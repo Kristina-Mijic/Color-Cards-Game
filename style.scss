@@ -1,0 +1,265 @@
+@import './colors.scss';
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: $border-radius;
+  font-size: 2.4rem;
+
+  &:hover {
+    background-color: $btn-hover;
+    color: $white;
+  }
+}
+
+.main-cards-wrapper {
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: $body-background-color;
+  position: relative;
+
+  .modal-card {
+    background: $modal-card-color;
+    border-radius: $border-radius;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      color: $color-text;
+      font-size: 6.4rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  .modal-game-title {
+    width: 50%;
+    text-align: center;
+  }
+
+  .modal-game-title span:first-child {
+    color: $white;
+  }
+  .modal-game-title span:nth-child(2) {
+    color: #001253;
+  }
+  .modal-game-title span:nth-child(3) {
+    color: #DC5F00;
+  }
+  .modal-game-title span:nth-child(4) {
+    color: $black;
+  }
+  .modal-game-title span:nth-child(5) {
+    color: #905E96;
+  }
+
+  .modal-card .next-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 20px 60px;
+  }
+
+  .input-modal input {
+    padding: 20px;
+    min-width: 400px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+  }
+
+  .counter-modal .counter-item {
+    font-size: 6.4rem;
+    color: $color-text;
+  }
+
+  .counter-modal,
+  .input-modal {
+    display: none;
+  }
+
+  .game-modal-wrapper {
+    display: none;
+  }
+
+  .game-modal-wrapper {
+    height: 90%;
+    width: 60%;
+    background-color: #FFF7E9;
+
+    .game-modal-top {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 0px;
+      width: 100%;
+      align-items: center;
+      position: absolute;
+      top: 5%;
+    }
+
+    .game-modal-input-wrapper .player-name {
+      font-size: 2rem;
+      color: $color-text;
+      margin-bottom: 10px;
+    }
+
+    .game-modal-input-wrapper .new-name-input {
+      padding: 8px 25px;
+      border: none;
+      border-bottom: 2px solid black;
+      background-color: transparent;
+      margin-bottom: 10px;
+      outline: none;
+    }
+
+    .game-modal-input-wrapper .btn-new-name {
+      padding: 10px 50px;
+      border-radius: 10px ;
+      font-size: 1.6rem;
+    }
+
+    .game-modal-top .show-random-color {
+      font-size: 1.4rem;
+      border: 1px solid $border-color;
+      padding: 10px 50px;
+      font-weight: bold;
+    }
+
+    .game-modal-top .generate-color-btn {
+      padding: 10px 50px;
+      border-radius: 10px ;
+      font-size: 1.6rem;
+    }
+
+    // .line {
+    //   width: 100%;
+    //   height: 10px;
+    //   background-color: #8EC3B0;
+    //   position: absolute;
+    //   top: 20%;
+    // }
+  }
+
+  .popup-color-btn {
+    width: 15%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    position: absolute;
+    height: 150px;
+    padding: 10px 50px;
+    top: 5%;
+    right: 5%;
+
+    .hexa-btn,
+    .rgb-btn {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  .game-modal-middle {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    position: absolute;
+    top: 25%;
+
+    .color-square {
+      background-color: #EDEDED;
+      width: 100px;
+      height: 100px;
+      border-radius: 20px 0;
+      cursor: pointer;
+      transition: transform .5s;
+
+      &:hover {
+        transform: scale(1.1); 
+      }
+    }
+
+    .game-over {
+      position: fixed;
+      bottom: 25%;
+      font-size: 60px;
+      color: red;
+    }
+  }
+
+  .game-modal-bottom {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    font-size: 2rem;
+    width: 100%;
+    border-radius: 0, 0, 10px, 10px;
+
+    .score-board-title {
+      margin-bottom: 20px;
+    }
+
+    .btn-new-game {
+      position: absolute;
+      right: 20px;
+      top: -5px;
+      padding: 5px 8px;
+      border: none;
+      background-color: #FFF7E9;
+
+      &:hover {
+        color: green;
+      }
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      height: 50px;
+      text-align: center;
+    }
+
+    // .th-name:nth-child(n+7) {
+    //   display: none;
+    // }
+
+    table, th ,td {
+      border: 1px solid $black;
+    }
+  }
+
+  .popup-color-btn {
+    display: none;
+  }
+
+}

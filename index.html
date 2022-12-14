@@ -8,7 +8,74 @@
   <title>Color Cards Game</title>
 </head>
 <body>
-  
+  <section class="main-cards-wrapper" id="main-cards-wrapper">
+    <div class="start-modal modal-card" id="start-modal">
+      <h1 class="modal-game-title title"><span>C</span><span>O</span><span>L</span><span>O</span><span>R</span> Cards Game</h1>
+      <button class="btn next-btn" id="next-btn-1">NEXT</button>
+    </div>
+
+    <div class="input-modal modal-card" id="input-modal-card">
+      <h2 class="player-info-title-modal title">Player</h2>
+      <input type="text" name="" placeholder="Unesi ime igraca" id="input-item">
+      <button class="btn next-btn" id="next-btn-2">NEXT</button>
+    </div>
+
+    <div class="counter-modal modal-card" id="counter-modal-card">
+      <p class="counter-item" id="counter-item"></p>
+    </div>
+
+    <div class="game-modal-wrapper modal-card" id="game-modal-wrapper">
+
+      <div class="game-modal-top" id="game-modal-top">
+        <div class="game-modal-input-wrapper">
+          <!-- <h1 class="player-name" id="player-name"></h1> -->
+          <input class="new-name-input" id='new-name-input-id' type="text" name="" placeholder="Unesi ime novog igraca"><br>
+          <button class="btn-new-name btn" id="btn-new-name-id">New name</button>
+        </div>
+        <p class="show-random-color" id="print-random-color"></p>
+        <button class="generate-color-btn btn" id="generate-color-btn">Generate color</button>
+      </div>
+
+      <div class="game-modal-middle" id="game-modal-middle">
+        <div class="color-square" id="0"></div>
+        <div class="color-square" id="1"></div>
+        <div class="color-square" id="2"></div>
+        <div class="color-square" id="3"></div>
+        <div class="color-square" id="4"></div>
+        <div class="color-square" id="5"></div>
+        <h1 class="game-over" id="game-over"></h1>
+      </div>
+
+      <div class="game-modal-bottom" id="game-modal-bottom">
+        <h2 class="score-board-title">Score Board:</h2>
+        <!-- <button class="btn btn-new-game" id="btn-new-game">New Game</button> -->
+        <table class="score-table-bottom">
+          <tr>
+            <th>Name:</th>
+            <th class="th-name"></th>
+            <th class="th-name"></th>
+            <th class="th-name"></th>
+            <th class="th-name"></th>
+            <th class="th-name"></th>
+          </tr>
+          <tr>
+            <th>Score:</th>
+            <th class="th-score"></th>
+            <th class="th-score"></th>
+            <th class="th-score"></th>
+            <th class="th-score"></th>
+            <th class="th-score"></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="popup-color-btn" id="popup-colors-btn">
+      <button class="btn hexa-btn" id="hexa-btn">HEXA</button>
+      <button class="btn rgb-btn" id="rgb-btn">RGB</button>
+    </div>
+  </section>
+
 
   <script src="main.js"></script>
 </body>
